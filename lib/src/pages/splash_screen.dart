@@ -1,9 +1,10 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
 
 import '../controllers/splash_screen_controller.dart';
 import '../repository/user_repository.dart';
-
 class SplashScreen extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -25,17 +26,22 @@ class SplashScreenState extends StateMVC<SplashScreen> {
   }
 
   void loadData() {
-    Future.delayed(const Duration(milliseconds: 500),(){
-      _con.progress.addListener(() {
-        double progress = 0;
-        _con.progress.value.values.forEach((_progress) {
-          progress += _progress;
-        });
+
+    _con.progress.addListener(() {
+      double progress = 0;
+
+      _con.progress.value.values.forEach((_progress) {
+        progress += _progress;
+        print(progress);
+      });
+      Future.delayed(Duration(seconds: 1),(){
+        print('entered');
         if (progress == 100) {
           Navigator.of(context).pushReplacementNamed('/lang');
         }
       });
     });
+
 
   }
 

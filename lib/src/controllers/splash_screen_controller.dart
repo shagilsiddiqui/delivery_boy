@@ -39,7 +39,7 @@ class SplashScreenController extends ControllerMVC with ChangeNotifier {
         progress?.notifyListeners();
       }
     });
-    Timer(Duration(seconds: 20), () {
+    Timer(Duration(seconds: 40), () {
       scaffoldKey?.currentState?.showSnackBar(SnackBar(
         content: Text(S.of(context).verify_your_internet_connection),
       ));
