@@ -39,56 +39,56 @@ class _SignUpWidgetState extends StateMVC<SignUpWidget> {
       child: Scaffold(
         key: _con.scaffoldKey,
         resizeToAvoidBottomPadding: false,
-        body: SingleChildScrollView(
-          child: Stack(
-            alignment: AlignmentDirectional.topCenter,
-            children: <Widget>[
-              Positioned(
-                top: 0,
-                child: Container(
-                  width: config.App(context).appWidth(100),
-                  height: config.App(context).appHeight(29.5),
-                  decoration:
-                      BoxDecoration(color: Theme.of(context).accentColor),
+        body: Stack(
+          alignment: AlignmentDirectional.topCenter,
+          children: <Widget>[
+            Positioned(
+              top: 0,
+              child: Container(
+                width: config.App(context).appWidth(100),
+                height: config.App(context).appHeight(19.5),
+                decoration: BoxDecoration(color: Theme.of(context).accentColor),
+              ),
+            ),
+            /* Positioned(
+              top: config.App(context).appHeight(29.5) - 150,
+              child: Container(
+                width: config.App(context).appWidth(84),
+                height: config.App(context).appHeight(.5),
+                child: Text(
+                  S.of(context).lets_start_with_register,
+                  style: Theme.of(context)
+                      .textTheme
+                      .headline2
+                      .merge(TextStyle(color: Theme.of(context).primaryColor)),
                 ),
               ),
-              Positioned(
-                top: config.App(context).appHeight(29.5) - 150,
-                child: Container(
-                  width: config.App(context).appWidth(84),
-                  height: config.App(context).appHeight(19.5),
-                  child: Text(
-                    S.of(context).lets_start_with_register,
-                    style: Theme.of(context).textTheme.headline2.merge(
-                        TextStyle(color: Theme.of(context).primaryColor)),
-                  ),
+            ), */
+            Positioned(
+              top: config.App(context).appHeight(29.5) - 150,
+              child: Container(
+                decoration: BoxDecoration(
+                    color: Theme.of(context).primaryColor,
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                    boxShadow: [
+                      BoxShadow(
+                        blurRadius: 50,
+                        color: Theme.of(context).hintColor.withOpacity(0.2),
+                      )
+                    ]),
+                margin: EdgeInsets.symmetric(
+                  horizontal: 20,
                 ),
-              ),
-              Positioned(
-                top: config.App(context).appHeight(29.5) - 120,
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Theme.of(context).primaryColor,
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
-                      boxShadow: [
-                        BoxShadow(
-                          blurRadius: 50,
-                          color: Theme.of(context).hintColor.withOpacity(0.2),
-                        )
-                      ]),
-                  margin: EdgeInsets.symmetric(
-                    horizontal: 20,
-                  ),
-                  padding: EdgeInsets.symmetric(vertical: 15, horizontal: 27),
-                  width: config.App(context).appWidth(88),
+                padding: EdgeInsets.symmetric(vertical: 15, horizontal: 27),
+                width: config.App(context).appWidth(88),
 //              height: config.App(context).appHeight(55),
-                  child: Form(
-                    key: _con.loginFormKey,
-                    /* child: SingleChildScrollView( */
-                    child: Container(
-                      child: Column(
-                        /* crossAxisAlignment: CrossAxisAlignment.stretch,
-                          mainAxisAlignment: MainAxisAlignment.center, */
+                child: Form(
+                  key: _con.loginFormKey,
+                  child: Container(
+                    child: SingleChildScrollView(
+                                          child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Row(
                             children: <Widget>[
@@ -183,8 +183,8 @@ class _SignUpWidgetState extends StateMVC<SignUpWidget> {
                                 : null,
                             decoration: InputDecoration(
                               labelText: S.of(context).email,
-                              labelStyle: TextStyle(
-                                  color: Theme.of(context).accentColor),
+                              labelStyle:
+                                  TextStyle(color: Theme.of(context).accentColor),
                               contentPadding: EdgeInsets.all(12),
                               hintText: 'johndoe@gmail.com',
                               hintStyle: TextStyle(
@@ -217,8 +217,8 @@ class _SignUpWidgetState extends StateMVC<SignUpWidget> {
                             // validator: (input) => input.length < 3 ? S.of(context).should_be_more_than_3_letters : null,
                             decoration: InputDecoration(
                               labelText: 'Mobile Number',
-                              labelStyle: TextStyle(
-                                  color: Theme.of(context).accentColor),
+                              labelStyle:
+                                  TextStyle(color: Theme.of(context).accentColor),
                               contentPadding: EdgeInsets.all(12),
                               hintText: '+919955763261',
                               hintStyle: TextStyle(
@@ -257,9 +257,8 @@ class _SignUpWidgetState extends StateMVC<SignUpWidget> {
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(15.0),
                               border: Border.all(
-                                color: Theme.of(context)
-                                    .focusColor
-                                    .withOpacity(0.2),
+                                color:
+                                    Theme.of(context).focusColor.withOpacity(0.2),
                                 style: BorderStyle.solid,
                               ),
                             ),
@@ -286,8 +285,8 @@ class _SignUpWidgetState extends StateMVC<SignUpWidget> {
                             // validator: (input) => input.length < 3 ? S.of(context).should_be_more_than_3_letters : null,
                             decoration: InputDecoration(
                               labelText: 'SSN',
-                              labelStyle: TextStyle(
-                                  color: Theme.of(context).accentColor),
+                              labelStyle:
+                                  TextStyle(color: Theme.of(context).accentColor),
                               contentPadding: EdgeInsets.all(12),
                               hintText: '078-05-1120',
                               hintStyle: TextStyle(
@@ -328,9 +327,8 @@ class _SignUpWidgetState extends StateMVC<SignUpWidget> {
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(15.0),
                               border: Border.all(
-                                color: Theme.of(context)
-                                    .focusColor
-                                    .withOpacity(0.2),
+                                color:
+                                    Theme.of(context).focusColor.withOpacity(0.2),
                                 style: BorderStyle.solid,
                               ),
                             ),
@@ -361,9 +359,8 @@ class _SignUpWidgetState extends StateMVC<SignUpWidget> {
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(15.0),
                               border: Border.all(
-                                color: Theme.of(context)
-                                    .focusColor
-                                    .withOpacity(0.2),
+                                color:
+                                    Theme.of(context).focusColor.withOpacity(0.2),
                                 style: BorderStyle.solid,
                               ),
                             ),
@@ -390,8 +387,8 @@ class _SignUpWidgetState extends StateMVC<SignUpWidget> {
                                 : null,
                             decoration: InputDecoration(
                               labelText: S.of(context).password,
-                              labelStyle: TextStyle(
-                                  color: Theme.of(context).accentColor),
+                              labelStyle:
+                                  TextStyle(color: Theme.of(context).accentColor),
                               contentPadding: EdgeInsets.all(12),
                               hintText: '••••••••••••',
                               hintStyle: TextStyle(
@@ -463,18 +460,18 @@ class _SignUpWidgetState extends StateMVC<SignUpWidget> {
                   ),
                 ),
               ),
-              Positioned(
-                bottom: 0.5,
-                child: FlatButton(
-                  onPressed: () {
-                    Navigator.of(context).pushNamed('/Login');
-                  },
-                  textColor: Theme.of(context).hintColor,
-                  child: Text(S.of(context).i_have_account_back_to_login),
-                ),
-              )
-            ],
-          ),
+            ),
+            /* Positioned(
+              bottom: 0.5,
+              child: FlatButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed('/Login');
+                },
+                textColor: Theme.of(context).hintColor,
+                child: Text(S.of(context).i_have_account_back_to_login),
+              ),
+            ) */
+          ],
         ),
       ),
     );
