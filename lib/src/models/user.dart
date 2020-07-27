@@ -12,6 +12,7 @@ class User {
   String address;
   String bio;
   Media image;
+  String ssn ; 
 
   // used for indicate if client logged in or not
   bool auth;
@@ -61,6 +62,7 @@ class User {
     map["phone"] = phone;
     map["address"] = address;
     map["bio"] = bio;
+    map["ssn_number"] = ssn ; 
     map["media"] = image?.toMap();
     return map;
   }

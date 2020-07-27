@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:developer';
 import 'dart:io';
 
 import 'package:global_configuration/global_configuration.dart';
@@ -17,6 +18,7 @@ Future<Stream<Order>> getOrders() async {
   Map<String, dynamic> _queryParams = {};
   final String orderStatusId = "5"; // for delivered status
   User _user = userRepo.currentUser.value;
+  log(_user.apiToken);
 
   _queryParams['api_token'] = _user.apiToken;
   _queryParams['with'] = 'driver;foodOrders;foodOrders.food;foodOrders.extras;orderStatus;deliveryAddress;payment';

@@ -213,8 +213,8 @@ class _SignUpWidgetState extends StateMVC<SignUpWidget> {
                           SizedBox(height: 20),
                           TextFormField(
                             keyboardType: TextInputType.number,
-                            //onSaved: (input) => _con.user.name = input,
-                            // validator: (input) => input.length < 3 ? S.of(context).should_be_more_than_3_letters : null,
+                            onSaved: (input) => _con.user.phone = input,
+                             validator: (input) => input.length == 10 ? "Invaild phone number": null,
                             decoration: InputDecoration(
                               labelText: 'Mobile Number',
                               labelStyle:
@@ -281,7 +281,7 @@ class _SignUpWidgetState extends StateMVC<SignUpWidget> {
                           ),
                           TextFormField(
                             keyboardType: TextInputType.number,
-                            //onSaved: (input) => _con.user.name = input,
+                            onSaved: (input) => _con.user.ssn = input,
                             // validator: (input) => input.length < 3 ? S.of(context).should_be_more_than_3_letters : null,
                             decoration: InputDecoration(
                               labelText: 'SSN',
