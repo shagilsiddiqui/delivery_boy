@@ -252,33 +252,33 @@ class _SignUpWidgetState extends StateMVC<SignUpWidget> {
                           SizedBox(
                             height: 10,
                           ),
-                          Container(
-                            padding: EdgeInsets.symmetric(horizontal: 10.0),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15.0),
-                              border: Border.all(
-                                color:
-                                    Theme.of(context).focusColor.withOpacity(0.2),
-                                style: BorderStyle.solid,
-                              ),
-                            ),
-                            child: DropdownButton(
-                              items: _dropdownValues
-                                  .map((value) => DropdownMenuItem(
-                                        child: Text(value),
-                                        value: value,
-                                      ))
-                                  .toList(),
-                              onChanged: (String val) {
-                                print(val);
-                              },
-                              isExpanded: false,
-                              value: _dropdownValues.first,
-                            ),
-                          ),
-                          SizedBox(
-                            height: 20,
-                          ),
+//                          Container(
+//                            padding: EdgeInsets.symmetric(horizontal: 10.0),
+//                            decoration: BoxDecoration(
+//                              borderRadius: BorderRadius.circular(15.0),
+//                              border: Border.all(
+//                                color:
+//                                    Theme.of(context).focusColor.withOpacity(0.2),
+//                                style: BorderStyle.solid,
+//                              ),
+//                            ),
+//                            child: DropdownButton(
+//                              items: _dropdownValues
+//                                  .map((value) => DropdownMenuItem(
+//                                        child: Text(value),
+//                                        value: value,
+//                                      ))
+//                                  .toList(),
+//                              onChanged: (String val) {
+//                                print(val);
+//                              },
+//                              isExpanded: false,
+//                              value: _dropdownValues.first,
+//                            ),
+//                          ),
+//                          SizedBox(
+//                            height: 20,
+//                          ),
                           TextFormField(
                             keyboardType: TextInputType.number,
                             onSaved: (input) => _con.user.ssn = input,
@@ -315,67 +315,67 @@ class _SignUpWidgetState extends StateMVC<SignUpWidget> {
                           SizedBox(
                             height: 20,
                           ),
-                          Text(
-                            'I own a',
-                            style: TextStyle(color: Colors.black, fontSize: 15),
-                          ),
+//                          Text(
+//                            'I own a',
+//                            style: TextStyle(color: Colors.black, fontSize: 15),
+//                          ),
+//                          SizedBox(
+//                            height: 10,
+//                          ),
+//                          Container(
+//                            padding: EdgeInsets.symmetric(horizontal: 10.0),
+//                            decoration: BoxDecoration(
+//                              borderRadius: BorderRadius.circular(15.0),
+//                              border: Border.all(
+//                                color:
+//                                    Theme.of(context).focusColor.withOpacity(0.2),
+//                                style: BorderStyle.solid,
+//                              ),
+//                            ),
+//                            child: DropdownButton(
+//                              items: _own
+//                                  .map((value) => DropdownMenuItem(
+//                                        child: Text(value),
+//                                        value: value,
+//                                      ))
+//                                  .toList(),
+//                              onChanged: (String value) {},
+//                              isExpanded: false,
+//                              value: _own.first,
+//                            ),
+//                          ),
                           SizedBox(
                             height: 10,
                           ),
-                          Container(
-                            padding: EdgeInsets.symmetric(horizontal: 10.0),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15.0),
-                              border: Border.all(
-                                color:
-                                    Theme.of(context).focusColor.withOpacity(0.2),
-                                style: BorderStyle.solid,
-                              ),
-                            ),
-                            child: DropdownButton(
-                              items: _own
-                                  .map((value) => DropdownMenuItem(
-                                        child: Text(value),
-                                        value: value,
-                                      ))
-                                  .toList(),
-                              onChanged: (String value) {},
-                              isExpanded: false,
-                              value: _own.first,
-                            ),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text(
-                            'work on',
-                            style: TextStyle(color: Colors.black, fontSize: 15),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Container(
-                            padding: EdgeInsets.symmetric(horizontal: 10.0),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15.0),
-                              border: Border.all(
-                                color:
-                                    Theme.of(context).focusColor.withOpacity(0.2),
-                                style: BorderStyle.solid,
-                              ),
-                            ),
-                            child: DropdownButton(
-                              items: _work
-                                  .map((value) => DropdownMenuItem(
-                                        child: Text(value),
-                                        value: value,
-                                      ))
-                                  .toList(),
-                              onChanged: (String value) {},
-                              isExpanded: false,
-                              value: _work.first,
-                            ),
-                          ),
+//                          Text(
+//                            'work on',
+//                            style: TextStyle(color: Colors.black, fontSize: 15),
+//                          ),
+//                          SizedBox(
+//                            height: 10,
+//                          ),
+//                          Container(
+//                            padding: EdgeInsets.symmetric(horizontal: 10.0),
+//                            decoration: BoxDecoration(
+//                              borderRadius: BorderRadius.circular(15.0),
+//                              border: Border.all(
+//                                color:
+//                                    Theme.of(context).focusColor.withOpacity(0.2),
+//                                style: BorderStyle.solid,
+//                              ),
+//                            ),
+//                            child: DropdownButton(
+//                              items: _work
+//                                  .map((value) => DropdownMenuItem(
+//                                        child: Text(value),
+//                                        value: value,
+//                                      ))
+//                                  .toList(),
+//                              onChanged: (String value) {},
+//                              isExpanded: false,
+//                              value: _work.first,
+//                            ),
+//                          ),
                           SizedBox(
                             height: 20,
                           ),
@@ -435,7 +435,7 @@ class _SignUpWidgetState extends StateMVC<SignUpWidget> {
                             color: Theme.of(context).accentColor,
                             onPressed: () {
                               _con.register();
-                              //Navigator.of(context).pushReplacementNamed('/document');
+                             // Navigator.of(context).pushReplacementNamed('/document');
                             },
                           ),
                           SizedBox(height: 25),

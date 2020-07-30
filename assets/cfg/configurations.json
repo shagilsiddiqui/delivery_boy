@@ -1,4 +1,4 @@
 {
   "base_url": "http://abeerfood-env.eba-5iqpq4h8.ap-south-1.elasticbeanstalk.com/",
-  "api_base_url": "http://abeerfood-env.eba-5iqpq4h8.ap-south-1.elasticbeanstalk.com/api/"
+  "api_base_url": "http://abeerfood-env.eba-5iqpq4h8.ap-south-1.elasticbeanstalk.com/api/driver/"
 }

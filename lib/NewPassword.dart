@@ -108,7 +108,7 @@ class _NewPasswordState extends StateMVC<NewPassword> {
                       SizedBox(height: 30),
                       TextFormField(
                         obscureText: _con.hidePassword,
-                        //onSaved: (input) => _con.user.password = input,
+                        onSaved: (input) => _con.user.password = input,
                        // validator: (input) => input.length < 6 ? S.of(context).should_be_more_than_6_letters : null,
                         decoration: InputDecoration(
                           labelText: 'Confirm Password',
@@ -144,8 +144,8 @@ class _NewPasswordState extends StateMVC<NewPassword> {
                             ),
                             color: Theme.of(context).accentColor,
                             onPressed: () {
-                            //  _con.resetPassword();
-                              Navigator.of(context).pushReplacementNamed('/PasswordChanged');
+                             _con.resetPassword();
+                              //Navigator.of(context).pushReplacementNamed('/PasswordChanged');
                             },
                           ),
 

@@ -36,7 +36,8 @@ Future<User> login(User user) async {
 Future<User> register(User user) async {
   final String url = '${GlobalConfiguration().getString('api_base_url')}register';
   final client = new http.Client();
-  print(user.toString()) ; 
+  print(user.toString()) ;
+  print(json.encode(user.toMap()));
   final response = await client.post(
     url,
     headers: {HttpHeaders.contentTypeHeader: 'application/json'},
