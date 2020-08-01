@@ -37,7 +37,13 @@ class SplashScreenState extends StateMVC<SplashScreen> {
       Future.delayed(Duration(seconds: 1),(){
         print('entered');
         if (progress == 100) {
-          Navigator.of(context).pushReplacementNamed('/lang');
+         try {
+          if (currentUser.value.apiToken == null) {
+            Navigator.of(context).pushReplacementNamed('/Login');
+          } else {
+            Navigator.of(context).pushReplacementNamed('/Pages', arguments: 1);
+          }
+        } catch (e) {}
         }
       });
     });

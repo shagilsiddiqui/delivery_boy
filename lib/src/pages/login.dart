@@ -143,7 +143,7 @@ class _LoginWidgetState extends StateMVC<LoginWidget> {
                 children: <Widget>[
                   FlatButton(
                     onPressed: () {
-                      Navigator.of(context).pushReplacementNamed('/NewPassword');
+                      Navigator.of(context).pushReplacementNamed('/ForgetPassword');
                     },
                     textColor: Theme.of(context).hintColor,
                     child: Text(S.of(context).i_forgot_password),
