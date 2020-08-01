@@ -35,24 +35,39 @@ class _DrawerWidgetState extends StateMVC<DrawerWidget> {
                   onTap: () {
                     Navigator.of(context).pushNamed('/Pages', arguments: 0);
                   },
-                  child: UserAccountsDrawerHeader(
+                  child :Container(
                     decoration: BoxDecoration(
                       color: Theme.of(context).hintColor.withOpacity(0.1),
-//              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(35)),
                     ),
-                    accountName: Text(
-                      currentUser.value.name,
-                      style: Theme.of(context).textTheme.headline6,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: <Widget>[
+                              CircleAvatar(
+                                backgroundColor: Theme.of(context).accentColor,
+                                backgroundImage:
+                                    NetworkImage(currentUser.value.image.thumb),
+                                    radius: 30,
+                              ),
+                              Image.asset("assets/img/logo-removebg-preview.png" , height: 50, width: 50,)
+                            ],
+                          ),
+                          Text(
+                            currentUser.value.name,
+                            style: Theme.of(context).textTheme.title,
+                          ),
+                          Text(
+                            currentUser.value.email,
+                            style: Theme.of(context).textTheme.caption,
+                          ),
+                        ],
+                      ),
                     ),
-                    accountEmail: Text(
-                      currentUser.value.email,
-                      style: Theme.of(context).textTheme.caption,
-                    ),
-                    currentAccountPicture: CircleAvatar(
-                      backgroundColor: Theme.of(context).accentColor,
-                      backgroundImage: NetworkImage(currentUser.value.image.thumb),
-                    ),
-                  ),
+                  )
                 ),
                 ListTile(
                   onTap: () {

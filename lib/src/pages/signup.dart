@@ -38,56 +38,23 @@ class _SignUpWidgetState extends StateMVC<SignUpWidget> {
       onWillPop: () async => false,
       child: Scaffold(
         key: _con.scaffoldKey,
-        resizeToAvoidBottomPadding: false,
-        body: Stack(
-          alignment: AlignmentDirectional.topCenter,
+        //resizeToAvoidBottomPadding: false,
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          //backgroundColor: Colors.teal,
+          
+          title: Text("Register With US" , style: TextStyle(color: Theme.of(context).accentColor,),),
+        ),
+        body: ListView(
+          //alignment: AlignmentDirectional.topCenter,
           children: <Widget>[
-            Positioned(
-              top: 0,
-              child: Container(
-                width: config.App(context).appWidth(100),
-                height: config.App(context).appHeight(19.5),
-                decoration: BoxDecoration(color: Theme.of(context).accentColor),
-              ),
-            ),
-            /* Positioned(
-              top: config.App(context).appHeight(29.5) - 150,
-              child: Container(
-                width: config.App(context).appWidth(84),
-                height: config.App(context).appHeight(.5),
-                child: Text(
-                  S.of(context).lets_start_with_register,
-                  style: Theme.of(context)
-                      .textTheme
-                      .headline2
-                      .merge(TextStyle(color: Theme.of(context).primaryColor)),
-                ),
-              ),
-            ), */
-            Positioned(
-              top: config.App(context).appHeight(29.5) - 150,
-              child: Container(
-                decoration: BoxDecoration(
-                    color: Theme.of(context).primaryColor,
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                    boxShadow: [
-                      BoxShadow(
-                        blurRadius: 50,
-                        color: Theme.of(context).hintColor.withOpacity(0.2),
-                      )
-                    ]),
-                margin: EdgeInsets.symmetric(
-                  horizontal: 20,
-                ),
-                padding: EdgeInsets.symmetric(vertical: 15, horizontal: 27),
-                width: config.App(context).appWidth(88),
-//              height: config.App(context).appHeight(55),
-                child: Form(
+             Form(
                   key: _con.loginFormKey,
                   child: Container(
+                    padding: EdgeInsets.all(20),
                     child: SingleChildScrollView(
                                           child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        //crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Row(
@@ -459,8 +426,8 @@ class _SignUpWidgetState extends StateMVC<SignUpWidget> {
                     ),
                   ),
                 ),
-              ),
-            ),
+             // ),
+           // ),
             /* Positioned(
               bottom: 0.5,
               child: FlatButton(
