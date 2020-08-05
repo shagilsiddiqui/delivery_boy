@@ -1,3 +1,7 @@
+import 'dart:async';
+import 'dart:developer';
+
+import 'package:deliveryboy/sendlocation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:intl/intl.dart' show DateFormat;
@@ -26,10 +30,13 @@ class _MapWidgetState extends StateMVC<MapWidget> {
   _MapWidgetState() : super(MapController()) {
     _con = controller;
   }
+  Timer timer;
+
 
   @override
   void initState() {
     _con.currentOrder = widget.routeArgument?.param as Order;
+    print(_con.currentOrder.toString());
     if (_con.currentOrder?.deliveryAddress?.latitude != null) {
       // user select a restaurant
       print(_con.currentOrder.deliveryAddress.toMap().toString());
@@ -38,8 +45,15 @@ class _MapWidgetState extends StateMVC<MapWidget> {
     } else {
       _con.getCurrentLocation();
     }
+    log("sending fromMap");
+    timer = Timer.periodic(Duration(seconds: 100), (Timer t) => sendLocation(widget.routeArgument.id));
     super.initState();
   }
+  @override
+void dispose() {
+  timer?.cancel();
+  super.dispose();
+}
 
   @override
   Widget build(BuildContext context) {

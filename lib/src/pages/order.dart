@@ -1,3 +1,6 @@
+import 'dart:async';
+import 'dart:developer';
+
 import 'package:deliveryboy/src/elements/CircularLoadingWidget.dart';
 import 'package:deliveryboy/src/elements/FoodOrderItemWidget.dart';
 import 'package:flutter/cupertino.dart';
@@ -8,6 +11,7 @@ import 'package:mvc_pattern/mvc_pattern.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../generated/l10n.dart';
+import '../../sendlocation.dart';
 import '../controllers/order_details_controller.dart';
 import '../elements/DrawerWidget.dart';
 import '../elements/ShoppingCartButtonWidget.dart';
@@ -33,10 +37,14 @@ class _OrderWidgetState extends StateMVC<OrderWidget> with SingleTickerProviderS
   _OrderWidgetState() : super(OrderDetailsController()) {
     _con = controller;
   }
+  Timer timer ; 
 
   @override
   void initState() {
     _con.listenForOrder(id: widget.routeArgument.id);
+    log(widget.routeArgument.id);
+    log("sending");
+    timer = Timer.periodic(Duration(seconds: 100), (Timer t) => sendLocation(widget.routeArgument.id));
     _tabController = TabController(length: 2, initialIndex: _tabIndex, vsync: this);
     _tabController.addListener(_handleTabSelection);
     super.initState();
@@ -44,6 +52,7 @@ class _OrderWidgetState extends StateMVC<OrderWidget> with SingleTickerProviderS
 
   void dispose() {
     _tabController.dispose();
+    timer?.cancel();
     super.dispose();
   }
 
@@ -57,6 +66,7 @@ class _OrderWidgetState extends StateMVC<OrderWidget> with SingleTickerProviderS
 
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       key: _con.scaffoldKey,
       drawer: DrawerWidget(),
