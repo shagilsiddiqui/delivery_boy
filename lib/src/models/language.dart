@@ -16,7 +16,7 @@ class LanguagesList {
       new Language("en", "English", "English", "assets/img/united-states-of-america.png"),
       new Language("ar", "Arabic", "العربية", "assets/img/united-arab-emirates.png"),
       new Language("es", "Spanish", "Spana", "assets/img/spain.png"),
-      new Language("fr", "French (France)", "Français - France", "assets/img/france.png"),
+      new Language("fr", "Swedish (Sweden)", "Swedish - Sweden", "assets/img/s.png"),
       new Language("fr", "French (Canada)", "Français - Canadien", "assets/img/canada.png"),
       new Language("pt", "Brazilian", "Brazilian", "assets/img/brazil.png"),
       new Language("ko", "Korean", "Korean", "assets/img/united-states-of-america.png"),

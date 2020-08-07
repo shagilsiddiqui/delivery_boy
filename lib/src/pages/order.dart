@@ -44,7 +44,7 @@ class _OrderWidgetState extends StateMVC<OrderWidget> with SingleTickerProviderS
     _con.listenForOrder(id: widget.routeArgument.id);
     log(widget.routeArgument.id);
     log("sending");
-    timer = Timer.periodic(Duration(seconds: 100), (Timer t) => sendLocation(widget.routeArgument.id));
+    timer = Timer.periodic(Duration(seconds: 10), (Timer t) => sendLocation(widget.routeArgument.id));
     _tabController = TabController(length: 2, initialIndex: _tabIndex, vsync: this);
     _tabController.addListener(_handleTabSelection);
     super.initState();

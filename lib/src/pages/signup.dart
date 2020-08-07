@@ -447,16 +447,13 @@ class _SignUpWidgetState extends StateMVC<SignUpWidget> {
             ),
             // ),
             // ),
-            /* Positioned(
-              bottom: 0.5,
-              child: FlatButton(
+             FlatButton(
                 onPressed: () {
                   Navigator.of(context).pushNamed('/Login');
                 },
                 textColor: Theme.of(context).hintColor,
                 child: Text(S.of(context).i_have_account_back_to_login),
               ),
-            ) */
           ],
         ),
       ),

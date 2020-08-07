@@ -14,8 +14,8 @@ Future<void> sendLocation(order_id) async{
   LocationData _locationData;
   _locationData = await location.getLocation();
   log("Loc");
-  print(_locationData.toString());
-  Uri uri = Helper.getUri('driver/api/updateLocation/'+order_id.toString() );
+  log(_locationData.toString());
+  Uri uri = Helper.getUri('api/updateLocation/'+order_id.toString() );
   Map<String, dynamic> _queryParams = {};
   User _user = userRepo.currentUser.value;
   String api = _user.apiToken;
@@ -26,8 +26,6 @@ Future<void> sendLocation(order_id) async{
   Map<String, String> loc= {
     "lat": _locationData.latitude.toString(),
     "long": _locationData.longitude.toString()
-
-
   } ;
   http.Response res = await http.put(uri , body:loc);
   log(res.statusCode.toString());

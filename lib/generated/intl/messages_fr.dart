@@ -20,149 +20,290 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'fr';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static _notInlinedMessages(_) => <String, Function> {
-    "about" : MessageLookupByLibrary.simpleMessage("À propos de"),
-    "add" : MessageLookupByLibrary.simpleMessage("Ajouter"),
-    "add_delivery_address" : MessageLookupByLibrary.simpleMessage("Ajouter une adresse de livraison"),
-    "address" : MessageLookupByLibrary.simpleMessage("Adresse"),
-    "address_not_provided_contact_client" : MessageLookupByLibrary.simpleMessage("Adresse non fournie contacter le client"),
-    "address_not_provided_please_call_the_client" : MessageLookupByLibrary.simpleMessage("Adresse non fournie veuillez appeler le client"),
-    "addresses_refreshed_successfuly" : MessageLookupByLibrary.simpleMessage("Adresses actualisées avec succès"),
-    "app_language" : MessageLookupByLibrary.simpleMessage("Langue de l\'application"),
-    "app_settings" : MessageLookupByLibrary.simpleMessage("Paramètres de l\'application"),
-    "application_preferences" : MessageLookupByLibrary.simpleMessage("Préférences d\'application"),
-    "cancel" : MessageLookupByLibrary.simpleMessage("Annuler"),
-    "cart" : MessageLookupByLibrary.simpleMessage("Chariot"),
-    "carts_refreshed_successfuly" : MessageLookupByLibrary.simpleMessage("Les paniers ont été rafraîchis avec succès"),
-    "cash_on_delivery" : MessageLookupByLibrary.simpleMessage("Paiement à la livraison"),
-    "category" : MessageLookupByLibrary.simpleMessage("Catégorie"),
-    "category_refreshed_successfuly" : MessageLookupByLibrary.simpleMessage("Catégorie actualisée avec succès"),
-    "checkout" : MessageLookupByLibrary.simpleMessage("Check-out"),
-    "close" : MessageLookupByLibrary.simpleMessage("proche"),
-    "confirm" : MessageLookupByLibrary.simpleMessage("Confirmer"),
-    "customer" : MessageLookupByLibrary.simpleMessage("Customer"),
-    "dark_mode" : MessageLookupByLibrary.simpleMessage("Mode sombre"),
-    "delivered" : MessageLookupByLibrary.simpleMessage("Livré"),
-    "deliveryAddress" : MessageLookupByLibrary.simpleMessage("Delivery Address"),
-    "delivery_addresses" : MessageLookupByLibrary.simpleMessage("Adresses de livraison"),
-    "delivery_confirmation" : MessageLookupByLibrary.simpleMessage("Confirmation de livraison"),
-    "delivery_fee" : MessageLookupByLibrary.simpleMessage("Frais de livraison"),
-    "description" : MessageLookupByLibrary.simpleMessage("La description"),
-    "discover__explorer" : MessageLookupByLibrary.simpleMessage("Découvrir & Explorer"),
-    "dismiss" : MessageLookupByLibrary.simpleMessage("Rejeter"),
-    "dont_have_any_item_in_the_notification_list" : MessageLookupByLibrary.simpleMessage("Aucun élément dans la liste des notifications"),
-    "dont_have_any_item_in_your_cart" : MessageLookupByLibrary.simpleMessage("Vous n\'avez aucun article dans votre panier"),
-    "edit" : MessageLookupByLibrary.simpleMessage("Éditer"),
-    "email" : MessageLookupByLibrary.simpleMessage("Email"),
-    "email_address" : MessageLookupByLibrary.simpleMessage("Adresse électronique"),
-    "email_to_reset_password" : MessageLookupByLibrary.simpleMessage("Courriel pour réinitialiser le mot de passe"),
-    "english" : MessageLookupByLibrary.simpleMessage("Anglais"),
-    "error_verify_email_settings" : MessageLookupByLibrary.simpleMessage("Erreur! Vérifier les paramètres de messagerie"),
-    "extras" : MessageLookupByLibrary.simpleMessage("Suppléments"),
-    "faq" : MessageLookupByLibrary.simpleMessage("FAQ"),
-    "favorite_foods" : MessageLookupByLibrary.simpleMessage("Aliments préférés"),
-    "foods_ordered" : MessageLookupByLibrary.simpleMessage("Aliments commandés"),
-    "fullName" : MessageLookupByLibrary.simpleMessage("Full Name"),
-    "full_address" : MessageLookupByLibrary.simpleMessage("Adresse complète"),
-    "full_name" : MessageLookupByLibrary.simpleMessage("Nom complet"),
-    "help__support" : MessageLookupByLibrary.simpleMessage("Support d\'aide"),
-    "help_support" : MessageLookupByLibrary.simpleMessage("Support d\'aide"),
-    "help_supports" : MessageLookupByLibrary.simpleMessage("Aide et supports"),
-    "hint_full_address" : MessageLookupByLibrary.simpleMessage("12 Street, City 21663, Country"),
-    "history" : MessageLookupByLibrary.simpleMessage("Histoire"),
-    "home" : MessageLookupByLibrary.simpleMessage("Accueil"),
-    "home_address" : MessageLookupByLibrary.simpleMessage("Adresse du domicile"),
-    "i_dont_have_an_account" : MessageLookupByLibrary.simpleMessage("Je n\'ai pas de compte?"),
-    "i_forgot_password" : MessageLookupByLibrary.simpleMessage("J\'ai oublié le mot de passe?"),
-    "i_have_account_back_to_login" : MessageLookupByLibrary.simpleMessage("J\'ai un compte? Retour connexion"),
-    "i_remember_my_password_return_to_login" : MessageLookupByLibrary.simpleMessage("Je me souviens de mon mot de passe retour à la connexion"),
-    "items" : MessageLookupByLibrary.simpleMessage("Articles"),
-    "john_doe" : MessageLookupByLibrary.simpleMessage("John Doe"),
-    "keep_your_old_meals_of_this_restaurant" : MessageLookupByLibrary.simpleMessage("Gardez vos anciens repas de ce restaurant"),
-    "km" : MessageLookupByLibrary.simpleMessage("Km"),
-    "languages" : MessageLookupByLibrary.simpleMessage("Les langues"),
-    "lets_start_with_login" : MessageLookupByLibrary.simpleMessage("Commençons par la connexion!"),
-    "lets_start_with_register" : MessageLookupByLibrary.simpleMessage("Commençons par vous inscrire!"),
-    "light_mode" : MessageLookupByLibrary.simpleMessage("Mode d\'éclairage"),
-    "log_out" : MessageLookupByLibrary.simpleMessage("Se déconnecter"),
-    "login" : MessageLookupByLibrary.simpleMessage("S\'identifier"),
-    "long_press_to_edit_item_swipe_item_to_delete_it" : MessageLookupByLibrary.simpleMessage("Appuyez longuement pour modifier l\'élément, faites glisser l\'élément pour le supprimer"),
-    "mi" : MessageLookupByLibrary.simpleMessage("mi"),
-    "new_address_added_successfully" : MessageLookupByLibrary.simpleMessage("Nouvelle adresse ajoutée avec succès"),
-    "new_order_from_costumer" : MessageLookupByLibrary.simpleMessage("Nouvelle commande du client"),
-    "not_a_valid_address" : MessageLookupByLibrary.simpleMessage("Pas une adresse valide"),
-    "not_a_valid_biography" : MessageLookupByLibrary.simpleMessage("Pas une biographie valide"),
-    "not_a_valid_cvc" : MessageLookupByLibrary.simpleMessage("Pas un CVC valide"),
-    "not_a_valid_date" : MessageLookupByLibrary.simpleMessage("Pas une date valide"),
-    "not_a_valid_email" : MessageLookupByLibrary.simpleMessage("Pas un e-mail valide"),
-    "not_a_valid_full_name" : MessageLookupByLibrary.simpleMessage("Pas un nom complet valide"),
-    "not_a_valid_number" : MessageLookupByLibrary.simpleMessage("Pas un numéro valide"),
-    "not_a_valid_phone" : MessageLookupByLibrary.simpleMessage("Pas un téléphone valide"),
-    "notifications" : MessageLookupByLibrary.simpleMessage("Notifications"),
-    "notifications_refreshed_successfuly" : MessageLookupByLibrary.simpleMessage("Notifications correctement actualisées"),
-    "order_details" : MessageLookupByLibrary.simpleMessage("détails de la commande"),
-    "order_id" : MessageLookupByLibrary.simpleMessage("Numéro de commande"),
-    "order_refreshed_successfuly" : MessageLookupByLibrary.simpleMessage("Commande rafraîchie avec succès"),
-    "order_satatus_changed" : MessageLookupByLibrary.simpleMessage("Le statut de la commande a changé"),
-    "ordered_foods" : MessageLookupByLibrary.simpleMessage("Aliments commandés"),
-    "orders" : MessageLookupByLibrary.simpleMessage("Ordres"),
-    "orders_history" : MessageLookupByLibrary.simpleMessage("Historique des commandes"),
-    "orders_refreshed_successfuly" : MessageLookupByLibrary.simpleMessage("Les commandes ont été rafraîchies avec succès"),
-    "password" : MessageLookupByLibrary.simpleMessage("Mot de passe"),
-    "payment_mode" : MessageLookupByLibrary.simpleMessage("Mode de paiement"),
-    "payment_settings" : MessageLookupByLibrary.simpleMessage("Paramètres de paiement"),
-    "payment_settings_updated_successfully" : MessageLookupByLibrary.simpleMessage("Les paramètres de paiement ont été mis à jour avec succès"),
-    "phone" : MessageLookupByLibrary.simpleMessage("Téléphone"),
-    "phoneNumber" : MessageLookupByLibrary.simpleMessage("Phone Number"),
-    "profile" : MessageLookupByLibrary.simpleMessage("Profil"),
-    "profile_settings" : MessageLookupByLibrary.simpleMessage("Paramètres de profil"),
-    "profile_settings_updated_successfully" : MessageLookupByLibrary.simpleMessage("Les paramètres de profil ont été mis à jour avec succès"),
-    "quantity" : MessageLookupByLibrary.simpleMessage("Quantity"),
-    "recent_orders" : MessageLookupByLibrary.simpleMessage("Dernières commandes"),
-    "recents_search" : MessageLookupByLibrary.simpleMessage("Recherche récente"),
-    "register" : MessageLookupByLibrary.simpleMessage("S\'inscrire"),
-    "reset" : MessageLookupByLibrary.simpleMessage("Réinitialiser"),
-    "reset_cart" : MessageLookupByLibrary.simpleMessage("Réinitialiser le panier?"),
-    "reset_your_cart_and_order_meals_form_this_restaurant" : MessageLookupByLibrary.simpleMessage("Réinitialisez votre panier et commandez des repas dans ce restaurant"),
-    "restaurant_refreshed_successfuly" : MessageLookupByLibrary.simpleMessage("Le restaurant a été rafraîchi avec succès"),
-    "save" : MessageLookupByLibrary.simpleMessage("sauvegarder"),
-    "search" : MessageLookupByLibrary.simpleMessage("Chercher"),
-    "select_your_preferred_languages" : MessageLookupByLibrary.simpleMessage("Sélectionnez vos langues préférées"),
-    "send_password_reset_link" : MessageLookupByLibrary.simpleMessage("Envoyer un lien"),
-    "settings" : MessageLookupByLibrary.simpleMessage("Réglages"),
-    "shopping_cart" : MessageLookupByLibrary.simpleMessage("Panier"),
-    "should_be_a_valid_email" : MessageLookupByLibrary.simpleMessage("Doit être un e-mail valide"),
-    "should_be_more_than_3_characters" : MessageLookupByLibrary.simpleMessage("Doit contenir plus de 3 caractères"),
-    "should_be_more_than_3_letters" : MessageLookupByLibrary.simpleMessage("Doit contenir plus de 3 lettres"),
-    "should_be_more_than_6_letters" : MessageLookupByLibrary.simpleMessage("Doit contenir plus de 6 lettres"),
-    "skip" : MessageLookupByLibrary.simpleMessage("Sauter"),
-    "start_exploring" : MessageLookupByLibrary.simpleMessage("Commencez à explorer"),
-    "submit" : MessageLookupByLibrary.simpleMessage("Soumettre"),
-    "subtotal" : MessageLookupByLibrary.simpleMessage("Total"),
-    "swip_left_the_notification_to_delete_or_read__unread" : MessageLookupByLibrary.simpleMessage("Faites glisser la notification vers la gauche pour la supprimer ou la lire"),
-    "tapBackAgainToLeave" : MessageLookupByLibrary.simpleMessage("Tap back again to leave"),
-    "tax" : MessageLookupByLibrary.simpleMessage("IMPÔT"),
-    "the_address_updated_successfully" : MessageLookupByLibrary.simpleMessage("L\'adresse a bien été mise à jour"),
-    "the_food_was_removed_from_your_cart" : MessageLookupByLibrary.simpleMessage("Le \$foodName a été supprimé de votre panier"),
-    "thisAccountNotExist" : MessageLookupByLibrary.simpleMessage("This account not exist"),
-    "total" : MessageLookupByLibrary.simpleMessage("Total"),
-    "tracking_order" : MessageLookupByLibrary.simpleMessage("Ordre de suivi"),
-    "tracking_refreshed_successfuly" : MessageLookupByLibrary.simpleMessage("Suivi actualisé avec succès"),
-    "unknown" : MessageLookupByLibrary.simpleMessage("Inconnue"),
-    "verify" : MessageLookupByLibrary.simpleMessage("Vérifier"),
-    "verify_your_internet_connection" : MessageLookupByLibrary.simpleMessage("Vérifiez votre connexion Internet"),
-    "verify_your_quantity_and_click_checkout" : MessageLookupByLibrary.simpleMessage("Vérifiez votre quantité et cliquez sur Commander"),
-    "version" : MessageLookupByLibrary.simpleMessage("Version"),
-    "viewDetails" : MessageLookupByLibrary.simpleMessage("View Details"),
-    "welcome" : MessageLookupByLibrary.simpleMessage("Bienvenue"),
-    "would_you_please_confirm_if_you_have_delivered_all_meals" : MessageLookupByLibrary.simpleMessage("Veuillez confirmer si vous avez livré tous les repas au client"),
-    "wrong_email_or_password" : MessageLookupByLibrary.simpleMessage("Courriel ou mot de passe incorrect"),
-    "you_can_discover_restaurants" : MessageLookupByLibrary.simpleMessage("Vous pouvez découvrir des restaurants et fast-food autour de vous et choisir votre meilleur repas après quelques minutes, nous le préparons et le livrons pour vous"),
-    "you_dont_have_any_order_assigned_to_you" : MessageLookupByLibrary.simpleMessage("Vous n\'avez aucune commande qui vous est assignée!"),
-    "you_must_add_foods_of_the_same_restaurants_choose_one" : MessageLookupByLibrary.simpleMessage("Vous devez ajouter des aliments des mêmes restaurants, choisissez un seul restaurant!"),
-    "your_address" : MessageLookupByLibrary.simpleMessage("Votre adresse"),
-    "your_biography" : MessageLookupByLibrary.simpleMessage("Votre biographie"),
-    "your_have_an_order_assigned_to_you" : MessageLookupByLibrary.simpleMessage("Vous avez une commande qui vous est attribuée"),
-    "your_reset_link_has_been_sent_to_your_email" : MessageLookupByLibrary.simpleMessage("Votre lien de réinitialisation a été envoyé à votre adresse e-mail")
-  };
+  static _notInlinedMessages(_) => <String, Function>{
+        "about": MessageLookupByLibrary.simpleMessage("handla om"),
+        "add": MessageLookupByLibrary.simpleMessage("Lägg till"),
+        "add_delivery_address":
+            MessageLookupByLibrary.simpleMessage("lägg till leveransadress"),
+        "add_to_cart":
+            MessageLookupByLibrary.simpleMessage("Lägg till i kundvagn"),
+        "address": MessageLookupByLibrary.simpleMessage("adress"),
+        "addresses_refreshed_successfuly": MessageLookupByLibrary.simpleMessage(
+            "adresserna uppdateras framgångsrikt"),
+        "all_menu": MessageLookupByLibrary.simpleMessage("alla menyer"),
+        "app_language": MessageLookupByLibrary.simpleMessage("appspråk"),
+        "app_settings":
+            MessageLookupByLibrary.simpleMessage("app inställningar"),
+        "application_preferences":
+            MessageLookupByLibrary.simpleMessage("applikationsinställningar"),
+        "cancel": MessageLookupByLibrary.simpleMessage("annullera"),
+        "cart": MessageLookupByLibrary.simpleMessage("vagn"),
+        "carts_refreshed_successfuly": MessageLookupByLibrary.simpleMessage(
+            "kundvagn uppdateras framgångsrikt"),
+        "cash_on_delivery":
+            MessageLookupByLibrary.simpleMessage("postförskott"),
+        "category": MessageLookupByLibrary.simpleMessage("kategori"),
+        "category_refreshed_successfuly": MessageLookupByLibrary.simpleMessage(
+            "kategorin uppdateras framgångsrikt"),
+        "checkout": MessageLookupByLibrary.simpleMessage("kolla upp"),
+        "clickToPayWithRazorpayMethod": MessageLookupByLibrary.simpleMessage(
+            "klicka för att betala med Razorpay-metoden"),
+        "click_on_the_stars_below_to_leave_comments":
+            MessageLookupByLibrary.simpleMessage(
+                "Klicka på stjärnorna nedan för att lämna kommentarer"),
+        "close": MessageLookupByLibrary.simpleMessage("stänga"),
+        "completeYourProfileDetailsToContinue":
+            MessageLookupByLibrary.simpleMessage(
+                "fyll i dina profilinformation för att fortsätta"),
+        "confirm_payment":
+            MessageLookupByLibrary.simpleMessage("bekräfta betalning"),
+        "confirmation": MessageLookupByLibrary.simpleMessage("Bekräftelse"),
+        "cuisines": MessageLookupByLibrary.simpleMessage("kök"),
+        "dark_mode": MessageLookupByLibrary.simpleMessage("mörkt läge"),
+        "default_credit_card":
+            MessageLookupByLibrary.simpleMessage("standardkreditkort"),
+        "delivery_addresses":
+            MessageLookupByLibrary.simpleMessage("leveransadresser"),
+        "delivery_fee": MessageLookupByLibrary.simpleMessage("Leveranskostnad"),
+        "description": MessageLookupByLibrary.simpleMessage("beskrivning"),
+        "discoverexplorer":
+            MessageLookupByLibrary.simpleMessage("upptäck explorer"),
+        "dont_have_any_item_in_the_notification_list":
+            MessageLookupByLibrary.simpleMessage(
+                "har inget objekt i meddelandelistan"),
+        "dont_have_any_item_in_your_cart": MessageLookupByLibrary.simpleMessage(
+            "har inga artiklar i din kundvagn"),
+        "double_click_on_the_food_to_add_it_to_the":
+            MessageLookupByLibrary.simpleMessage(
+                "dubbelklicka på maten för att lägga till den i"),
+        "edit": MessageLookupByLibrary.simpleMessage("redigera"),
+        "email": MessageLookupByLibrary.simpleMessage("e-post"),
+        "email_address": MessageLookupByLibrary.simpleMessage("e-postadress"),
+        "email_to_reset_password": MessageLookupByLibrary.simpleMessage(
+            "e-post för att återställa lösenordet"),
+        "english": MessageLookupByLibrary.simpleMessage("engelsk"),
+        "error_verify_email_settings": MessageLookupByLibrary.simpleMessage(
+            "fel verifiera e-postinställningar"),
+        "extras": MessageLookupByLibrary.simpleMessage("extramaterial"),
+        "faq": MessageLookupByLibrary.simpleMessage("FAQ"),
+        "faqsRefreshedSuccessfuly": MessageLookupByLibrary.simpleMessage(
+            "faqs Refreshed framgångsrikt"),
+        "favorite_foods": MessageLookupByLibrary.simpleMessage("favoritmat"),
+        "favorites": MessageLookupByLibrary.simpleMessage("favoriter"),
+        "favorites_refreshed_successfuly": MessageLookupByLibrary.simpleMessage(
+            "favoriter uppdateras framgångsrikt"),
+        "featured_foods": MessageLookupByLibrary.simpleMessage("med mat"),
+        "foodRefreshedSuccessfuly":
+            MessageLookupByLibrary.simpleMessage("mat Refreshed framgångsrikt"),
+        "food_categories":
+            MessageLookupByLibrary.simpleMessage("matkategorier"),
+        "full_address": MessageLookupByLibrary.simpleMessage("hela adressen"),
+        "full_name": MessageLookupByLibrary.simpleMessage("fullständiga namn"),
+        "g": MessageLookupByLibrary.simpleMessage("g"),
+        "guest": MessageLookupByLibrary.simpleMessage("gäst"),
+        "helpsupport": MessageLookupByLibrary.simpleMessage("hjälp stöd"),
+        "help_support": MessageLookupByLibrary.simpleMessage("hjälp stöd"),
+        "help_supports": MessageLookupByLibrary.simpleMessage("hjälp stöd"),
+        "hint_full_address": MessageLookupByLibrary.simpleMessage(
+            "12 Street, City 21663, Country"),
+        "home": MessageLookupByLibrary.simpleMessage("Hem"),
+        "home_address": MessageLookupByLibrary.simpleMessage("hemadress"),
+        "how_would_you_rate_thisrestaurant":
+            MessageLookupByLibrary.simpleMessage(
+                "hur skulle du betygsätta denna restaurang"),
+        "i_dont_have_an_account":
+            MessageLookupByLibrary.simpleMessage("jag har inget konto"),
+        "i_forgot_password":
+            MessageLookupByLibrary.simpleMessage("jag har glömt lösenordet"),
+        "i_have_account_back_to_login": MessageLookupByLibrary.simpleMessage(
+            "jag har konto tillbaka för att logga in"),
+        "i_remember_my_password_return_to_login":
+            MessageLookupByLibrary.simpleMessage(
+                "jag minns mitt lösenord tillbaka till inloggning"),
+        "information": MessageLookupByLibrary.simpleMessage("information"),
+        "ingredients": MessageLookupByLibrary.simpleMessage("Ingredienser"),
+        "john_doe": MessageLookupByLibrary.simpleMessage("John Doe"),
+        "keep_your_old_meals_of_this_restaurant":
+            MessageLookupByLibrary.simpleMessage(
+                "behålla ditt gamla medel för denna restaurang"),
+        "languages": MessageLookupByLibrary.simpleMessage("språk"),
+        "lets_start_with_login":
+            MessageLookupByLibrary.simpleMessage("låter börja med inloggning"),
+        "lets_start_with_register":
+            MessageLookupByLibrary.simpleMessage("låter börja med registret"),
+        "light_mode": MessageLookupByLibrary.simpleMessage("ljusläge"),
+        "log_out": MessageLookupByLibrary.simpleMessage("logga ut"),
+        "login": MessageLookupByLibrary.simpleMessage("logga in"),
+        "long_press_to_edit_item_swipe_item_to_delete_it":
+            MessageLookupByLibrary.simpleMessage(
+                "long_press för att redigera objekt svep för att ta bort det"),
+        "longpress_on_the_food_to_add_suplements":
+            MessageLookupByLibrary.simpleMessage(
+                "tryck länge på maten för att lägga till kosttillskott"),
+        "maps_explorer":
+            MessageLookupByLibrary.simpleMessage("kartor explorer"),
+        "menu": MessageLookupByLibrary.simpleMessage("meny"),
+        "most_popular": MessageLookupByLibrary.simpleMessage("mest populär"),
+        "multirestaurants":
+            MessageLookupByLibrary.simpleMessage("flera restauranger"),
+        "my_orders": MessageLookupByLibrary.simpleMessage("mina beställningar"),
+        "new_address_added_successfully": MessageLookupByLibrary.simpleMessage(
+            "den nya adressen har lagts till"),
+        "new_order_from_client": MessageLookupByLibrary.simpleMessage(
+            "ny beställning från klienten"),
+        "not_a_valid_address":
+            MessageLookupByLibrary.simpleMessage("inte en giltig adress"),
+        "not_a_valid_biography":
+            MessageLookupByLibrary.simpleMessage("inte en giltig biografi"),
+        "not_a_valid_cvc":
+            MessageLookupByLibrary.simpleMessage("inte en giltig cvc"),
+        "not_a_valid_date":
+            MessageLookupByLibrary.simpleMessage("inte ett giltigt datum"),
+        "not_a_valid_email": MessageLookupByLibrary.simpleMessage(
+            "inte ett giltigt e-postmeddelande"),
+        "not_a_valid_full_name": MessageLookupByLibrary.simpleMessage(
+            "inte ett giltigt fullständigt namn"),
+        "not_a_valid_number":
+            MessageLookupByLibrary.simpleMessage("inte ett giltigt nummer"),
+        "not_a_valid_phone":
+            MessageLookupByLibrary.simpleMessage("inte en giltig telefon"),
+        "notifications": MessageLookupByLibrary.simpleMessage("aviseringar"),
+        "notifications_refreshed_successfuly":
+            MessageLookupByLibrary.simpleMessage(
+                "meddelanden uppdateras framgångsrikt"),
+        "nutrition": MessageLookupByLibrary.simpleMessage("näring"),
+        "or_checkout_with":
+            MessageLookupByLibrary.simpleMessage("eller kassa med"),
+        "order_id": MessageLookupByLibrary.simpleMessage("beställnings-id"),
+        "order_refreshed_successfuly": MessageLookupByLibrary.simpleMessage(
+            "Kommandot uppdateras framgångsrikt"),
+        "order_status_changed":
+            MessageLookupByLibrary.simpleMessage("Orderstatus har ändrats"),
+        "ordered_by_nearby_first":
+            MessageLookupByLibrary.simpleMessage("Beställs av närhet först"),
+        "orders_refreshed_successfuly": MessageLookupByLibrary.simpleMessage(
+            "Order uppdaterade framgångsrikt"),
+        "password": MessageLookupByLibrary.simpleMessage("Lösenord"),
+        "payment_mode": MessageLookupByLibrary.simpleMessage("Betalningsmetod"),
+        "payment_options":
+            MessageLookupByLibrary.simpleMessage("Betalningsalternativ"),
+        "payment_settings":
+            MessageLookupByLibrary.simpleMessage("Betalningsinställningar"),
+        "payment_settings_updated_successfully":
+            MessageLookupByLibrary.simpleMessage(
+                "Betalningsinställningarna har uppdaterats"),
+        "payments_settings":
+            MessageLookupByLibrary.simpleMessage("Betalningsinställningar"),
+        "paypal_payment":
+            MessageLookupByLibrary.simpleMessage("Betalning: Paypal"),
+        "phone": MessageLookupByLibrary.simpleMessage("Telefon"),
+        "profile": MessageLookupByLibrary.simpleMessage("Profil"),
+        "profile_settings":
+            MessageLookupByLibrary.simpleMessage("Profilinställningar"),
+        "profile_settings_updated_successfully":
+            MessageLookupByLibrary.simpleMessage(
+                "Profilinställningarna har uppdaterats"),
+        "quantity": MessageLookupByLibrary.simpleMessage("Belopp"),
+        "razorpay": MessageLookupByLibrary.simpleMessage("RazorPay"),
+        "razorpayPayment":
+            MessageLookupByLibrary.simpleMessage("RazorPay-betalning"),
+        "recent_orders":
+            MessageLookupByLibrary.simpleMessage("Senaste beställningar"),
+        "recent_reviews":
+            MessageLookupByLibrary.simpleMessage("Senaste recensioner"),
+        "recents_search":
+            MessageLookupByLibrary.simpleMessage("Nyligen genomförd forskning"),
+        "register": MessageLookupByLibrary.simpleMessage("Registrera"),
+        "reset": MessageLookupByLibrary.simpleMessage("Återställa"),
+        "reset_cart":
+            MessageLookupByLibrary.simpleMessage("Återställa vagnen?"),
+        "reset_your_cart_and_order_meals_form_this_restaurant":
+            MessageLookupByLibrary.simpleMessage(
+                "Återställ din korg och beställ måltider på denna restaurang"),
+        "restaurant_refreshed_successfuly":
+            MessageLookupByLibrary.simpleMessage("Uppdaterad restaurang"),
+        "reviews": MessageLookupByLibrary.simpleMessage("Lägga märke till"),
+        "reviews_refreshed_successfully": MessageLookupByLibrary.simpleMessage(
+            "Recensionerna uppdateras framgångsrikt!"),
+        "save": MessageLookupByLibrary.simpleMessage("att spara"),
+        "search": MessageLookupByLibrary.simpleMessage("Sök"),
+        "search_for_restaurants_or_foods": MessageLookupByLibrary.simpleMessage(
+            "Sök efter restauranger eller mat"),
+        "select_extras_to_add_them_on_the_food":
+            MessageLookupByLibrary.simpleMessage(
+                "Välj extra för att lägga till dem i maten"),
+        "select_your_preferred_languages":
+            MessageLookupByLibrary.simpleMessage("Välj önskade språk"),
+        "select_your_preferred_payment_mode":
+            MessageLookupByLibrary.simpleMessage("Välj önskad betalningsmetod"),
+        "send_password_reset_link": MessageLookupByLibrary.simpleMessage(
+            "Skicka länk för återställning av lösenord"),
+        "settings": MessageLookupByLibrary.simpleMessage("inställningar"),
+        "shopping_cart": MessageLookupByLibrary.simpleMessage("Stridsvagn"),
+        "should_be_a_valid_email": MessageLookupByLibrary.simpleMessage(
+            "Bör vara ett giltigt e-postmeddelande"),
+        "should_be_more_than_3_characters":
+            MessageLookupByLibrary.simpleMessage("Bör vara mer än 3 tecken"),
+        "should_be_more_than_3_letters":
+            MessageLookupByLibrary.simpleMessage("Bör vara mer än 3 bokstäver"),
+        "should_be_more_than_6_letters":
+            MessageLookupByLibrary.simpleMessage("Bör vara mer än 6 bokstäver"),
+        "skip": MessageLookupByLibrary.simpleMessage("Hoppa"),
+        "start_exploring":
+            MessageLookupByLibrary.simpleMessage("Börja utforska"),
+        "submit": MessageLookupByLibrary.simpleMessage("Skicka in"),
+        "subtotal": MessageLookupByLibrary.simpleMessage("Total"),
+        "tax": MessageLookupByLibrary.simpleMessage("BESKATTA"),
+        "tell_us_about_this_food":
+            MessageLookupByLibrary.simpleMessage("Berätta om denna mat"),
+        "the_address_updated_successfully":
+            MessageLookupByLibrary.simpleMessage("Adressen har uppdaterats"),
+        "the_food_has_been_rated_successfully":
+            MessageLookupByLibrary.simpleMessage(
+                "Maten har utvärderats framgångsrikt"),
+        "the_restaurant_has_been_rated_successfully":
+            MessageLookupByLibrary.simpleMessage(
+                "Restaurangen har fått ett framgångsrikt betyg"),
+        "thisFoodWasAddedToFavorite": MessageLookupByLibrary.simpleMessage(
+            "Denna mat lades till favorit"),
+        "thisFoodWasRemovedFromFavorites": MessageLookupByLibrary.simpleMessage(
+            "Denna mat togs bort från favoriter"),
+        "top_restaurants":
+            MessageLookupByLibrary.simpleMessage("Bästa restauranger"),
+        "total": MessageLookupByLibrary.simpleMessage("Total"),
+        "tracking_order":
+            MessageLookupByLibrary.simpleMessage("Spårningskontroll"),
+        "tracking_refreshed_successfuly":
+            MessageLookupByLibrary.simpleMessage("Uppdaterad spårning"),
+        "trending_this_week":
+            MessageLookupByLibrary.simpleMessage("Trender den här veckan"),
+        "unknown": MessageLookupByLibrary.simpleMessage("Okänd"),
+        "verify": MessageLookupByLibrary.simpleMessage("Kontrollera"),
+        "verify_your_internet_connection": MessageLookupByLibrary.simpleMessage(
+            "Kontrollera din internetanslutning"),
+        "verify_your_quantity_and_click_checkout":
+            MessageLookupByLibrary.simpleMessage(
+                "Kontrollera ditt antal och klicka på Validera"),
+        "version": MessageLookupByLibrary.simpleMessage("Version"),
+        "welcome": MessageLookupByLibrary.simpleMessage("Välkommen"),
+        "what_they_say": MessageLookupByLibrary.simpleMessage("Vad de säger ?"),
+        "wrong_email_or_password":
+            MessageLookupByLibrary.simpleMessage("fel email eller lösenord"),
+        "you_can_discover_restaurants": MessageLookupByLibrary.simpleMessage(
+            "Du kan upptäcka restauranger och snabbmat runt dig och välja din bästa måltid efter några minuter, vi kommer att förbereda den och leverera den till dig"),
+        "you_must_add_foods_of_the_same_restaurants_choose_one":
+            MessageLookupByLibrary.simpleMessage(
+                "Du måste lägga till mat från samma restauranger, välj bara en restaurang!"),
+        "you_must_signin_to_access_to_this_section":
+            MessageLookupByLibrary.simpleMessage(
+                "Du måste logga in för att komma åt det här avsnittet"),
+        "your_address": MessageLookupByLibrary.simpleMessage("Din adress"),
+        "your_biography": MessageLookupByLibrary.simpleMessage("Din biografi"),
+        "your_order_has_been_successfully_submitted":
+            MessageLookupByLibrary.simpleMessage(
+                "Din beställning har skickats!"),
+        "your_reset_link_has_been_sent_to_your_email":
+            MessageLookupByLibrary.simpleMessage(
+                "Din återställningslänk har skickats till din e-post")
+      };
 }

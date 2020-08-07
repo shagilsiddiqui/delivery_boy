@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:deliveryboy/generated/i18n.dart';
-import 'package:deliveryboy/src/controllers/user_controller.dart';
-import 'package:deliveryboy/src/elements/BlockButtonWidget.dart';
-import 'package:deliveryboy/src/helpers/app_config.dart' as config;
 import 'package:mvc_pattern/mvc_pattern.dart';
+
+import '../../generated/l10n.dart';
+import '../controllers/user_controller.dart';
+import '../elements/BlockButtonWidget.dart';
+import '../helpers/app_config.dart' as config;
 
 class ForgetPasswordWidget extends StatefulWidget {
   @override
@@ -45,23 +46,20 @@ class _ForgetPasswordWidgetState extends StateMVC<ForgetPasswordWidget> {
                 width: config.App(context).appWidth(84),
                 height: config.App(context).appHeight(37),
                 child: Text(
-                  'Forget Password',
-                  style: Theme.of(context).textTheme.display3.merge(TextStyle(color: Theme.of(context).primaryColor)),
+                  S.of(context).email_to_reset_password,
+                  style: Theme.of(context).textTheme.headline2.merge(TextStyle(color: Theme.of(context).primaryColor)),
                 ),
               ),
             ),
             Positioned(
               top: config.App(context).appHeight(37) - 50,
               child: Container(
-                decoration: BoxDecoration(
-                    color: Theme.of(context).primaryColor,
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                    boxShadow: [
-                      BoxShadow(
-                        blurRadius: 50,
-                        color: Theme.of(context).hintColor.withOpacity(0.2),
-                      )
-                    ]),
+                decoration: BoxDecoration(color: Theme.of(context).primaryColor, borderRadius: BorderRadius.all(Radius.circular(10)), boxShadow: [
+                  BoxShadow(
+                    blurRadius: 50,
+                    color: Theme.of(context).hintColor.withOpacity(0.2),
+                  )
+                ]),
                 margin: EdgeInsets.symmetric(
                   horizontal: 20,
                 ),
@@ -74,63 +72,32 @@ class _ForgetPasswordWidgetState extends StateMVC<ForgetPasswordWidget> {
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Container(
-                        //width: config.App(context).appWidth(84),
-                        //height: config.App(context).appHeight(37),
-                        child: Text(
-                          'One Time Password is sent to your\n registered number to reset your Password',
-                          style: Theme.of(context).textTheme.display3.merge(TextStyle(color:Colors.black87)),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
                       TextFormField(
                         keyboardType: TextInputType.emailAddress,
                         onSaved: (input) => _con.user.email = input,
-                        validator: (input) => input.length != 6 ?'should_be_equal_to_6 ': null,
+                        validator: (input) => !input.contains('@') ? S.of(context).should_be_a_valid_email : null,
                         decoration: InputDecoration(
-                          labelText: 'OTP',
+                          labelText: S.of(context).email,
                           labelStyle: TextStyle(color: Theme.of(context).accentColor),
                           contentPadding: EdgeInsets.all(12),
-                          hintText: '1234567',
+                          hintText: 'johndoe@gmail.com',
                           hintStyle: TextStyle(color: Theme.of(context).focusColor.withOpacity(0.7)),
                           prefixIcon: Icon(Icons.alternate_email, color: Theme.of(context).accentColor),
-                          border: OutlineInputBorder(
-                              borderSide: BorderSide(color: Theme.of(context).focusColor.withOpacity(0.2))),
-                          focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: Theme.of(context).focusColor.withOpacity(0.5))),
-                          enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: Theme.of(context).focusColor.withOpacity(0.2))),
+                          border: OutlineInputBorder(borderSide: BorderSide(color: Theme.of(context).focusColor.withOpacity(0.2))),
+                          focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Theme.of(context).focusColor.withOpacity(0.5))),
+                          enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Theme.of(context).focusColor.withOpacity(0.2))),
                         ),
                       ),
                       SizedBox(height: 30),
-                      Row(
-                        children: <Widget>[
-                          BlockButtonWidget(
-                            text: Text(
-                              'Verfiy',
-                              style: TextStyle(color: Theme.of(context).primaryColor),
-                            ),
-                            color: Theme.of(context).accentColor,
-                            onPressed: () {
-                             // _con.resetPassword();
-                              Navigator.of(context).pushReplacementNamed('/NewPassword');
-                            },
-                          ),
-
-//                          BlockButtonWidget(
-//                            text: Text(
-//                              'Resend OTP',
-//                              style: TextStyle(color: Theme.of(context).primaryColor),
-//                            ),
-//                            color: Theme.of(context).accentColor,
-//                            onPressed: () {
-//                              // _con.resetPassword();
-//
-//                            },
-//                          ),
-                        ],
+                      BlockButtonWidget(
+                        text: Text(
+                          S.of(context).send_password_reset_link,
+                          style: TextStyle(color: Theme.of(context).primaryColor),
+                        ),
+                        color: Theme.of(context).accentColor,
+                        onPressed: () {
+                          _con.resetPassword();
+                        },
                       ),
                     ],
                   ),
@@ -146,14 +113,14 @@ class _ForgetPasswordWidgetState extends StateMVC<ForgetPasswordWidget> {
                       Navigator.of(context).pushReplacementNamed('/Login');
                     },
                     textColor: Theme.of(context).hintColor,
-                    child: Text('I remember my password return to login'),
+                    child: Text(S.of(context).i_remember_my_password_return_to_login),
                   ),
                   FlatButton(
                     onPressed: () {
                       Navigator.of(context).pushReplacementNamed('/SignUp');
                     },
                     textColor: Theme.of(context).hintColor,
-                    child: Text('I dont have an account'),
+                    child: Text(S.of(context).i_dont_have_an_account),
                   ),
                 ],
               ),
